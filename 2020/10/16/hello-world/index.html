@@ -190,8 +190,10 @@
         </a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -280,6 +282,20 @@
       <span class="post-meta-item-text">阅读次数：</span>
       <span id="busuanzi_value_page_pv"></span>
     </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/10/16/hello-world/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/16/hello-world/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 </div>
 
         </div>
@@ -334,6 +350,7 @@
 
 
       
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -435,6 +452,18 @@
   
 
   
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({"enable":true,"appId":"69F3y7P49DQ8WsbWflpq98Y8-gzGzoHsz","appKey":"urijj3pYjSuYkCxBa2VvBbA5","serverURLs":null,"placeholder":"请输入留言","avatar":"mm","meta":["nick","mail"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":false,"enableQQ":true,"requiredFields":[]}, {
+      el: '#valine-comments',
+      path: "/2020/10/16/hello-world/",
+      serverURLs: "https://69f3y7p4.api.lncldglobal.com"
+    }));
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
