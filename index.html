@@ -182,7 +182,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -191,7 +191,7 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -230,6 +230,87 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/17/java-idea-servlet-jsp-mysql-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E7%99%BB%E9%99%86%E6%B3%A8%E5%86%8C%E5%8A%9F%E8%83%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/IMG_3470.JPG">
+      <meta itemprop="name" content="JacksonFang">
+      <meta itemprop="description" content="一些思考的记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="房笑宇的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/17/java-idea-servlet-jsp-mysql-%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E7%99%BB%E9%99%86%E6%B3%A8%E5%86%8C%E5%8A%9F%E8%83%BD/" class="post-title-link" itemprop="url">java+idea+servlet+jsp+mysql-最简单的登陆注册功能</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-05-17 14:43:27 / 修改时间：14:48:26" itemprop="dateCreated datePublished" datetime="2021-05-17T14:43:27+08:00">2021-05-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Login-Regist"><a href="#Login-Regist" class="headerlink" title="Login-Regist"></a>Login-Regist</h1><p>简单的登陆注册功能<br>基于mysql+servlet+jsp搭建的，遵循MVC的设计思路，Model用来写后台逻辑，View写前端，Controller写servlet，用于连接前后端。</p>
+<p>代码链接<a target="_blank" rel="noopener" href="https://github.com/fangInFBI/Login-Regist">github</a></p>
+<h3 id="1、文件目录介绍（由上到下）"><a href="#1、文件目录介绍（由上到下）" class="headerlink" title="1、文件目录介绍（由上到下）"></a>1、文件目录介绍（由上到下）</h3><p><img src="cedbd2934585404ee739576edcbbc734.png" alt="image"></p>
+<p>src文件夹里面主要放后端的相关代码，包括两个部分：Controller和Model。</p>
+<ul>
+<li>Controller文件夹里面放的是LoginServlet.java和RegistServlet.java，分别处理登陆服务和注册服务</li>
+<li>Model文件夹代码介绍：Dao.java写的是数据库的具体操作，增删改查等。DbUti.java写的是与数据库连接的代码，包括参数设定等。User.java是前后端数据的暂存。</li>
+</ul>
+<p>web文件夹是放的项目的配置和前端代码</p>
+<ul>
+<li>*.jsp：放的前端代码，index.jsp是创建项目的时候自动创建的，运行时首先打开的是这个页面，后面可以通过修改tomcat参数进行修改初始页面，修改的时候路径一定要搞对。login.jsp写的登陆的前端页面。ok.jsp放的登陆成功之后进入的页面。register.jsp写的是注册页面的代码</li>
+<li>web.xml：放的项目配置的代码，主要配置servlet。</li>
+</ul>
+<h3 id="2、代码整体逻辑"><a href="#2、代码整体逻辑" class="headerlink" title="2、代码整体逻辑"></a>2、代码整体逻辑</h3><p><img src="fec505fdec62e8e328c602bb4a0131c2.png" alt="image"></p>
+<h3 id="3、代码细节介绍"><a href="#3、代码细节介绍" class="headerlink" title="3、代码细节介绍"></a>3、代码细节介绍</h3><p>代码链接<a target="_blank" rel="noopener" href="https://github.com/fangInFBI/Login-Regist">github</a></p>
+<p>直接看代码注释即可，每行都有注释</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
