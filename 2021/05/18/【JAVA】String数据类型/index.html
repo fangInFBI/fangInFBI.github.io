@@ -31,7 +31,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/05/18/%E3%80%90JAVA%E3%80%91String%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/image-20210518203554332.png">
 <meta property="article:published_time" content="2021-05-18T12:30:04.000Z">
-<meta property="article:modified_time" content="2021-05-19T01:14:20.246Z">
+<meta property="article:modified_time" content="2021-05-19T11:29:27.271Z">
 <meta property="article:author" content="JacksonFang">
 <meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary">
@@ -173,7 +173,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#char%E5%AD%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">char字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.</span> <span class="nav-text">String字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0"><span class="nav-number">2.1.</span> <span class="nav-text">字符串常量池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A0%81%E7%82%B9%E3%80%81%E4%BB%A3%E7%A0%81%E5%8D%95%E5%85%83"><span class="nav-number">2.2.</span> <span class="nav-text">码点、代码单元</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#char%E5%AD%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">char字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.</span> <span class="nav-text">String字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0"><span class="nav-number">2.1.</span> <span class="nav-text">字符串常量池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A0%81%E7%82%B9%E3%80%81%E4%BB%A3%E7%A0%81%E5%8D%95%E5%85%83"><span class="nav-number">2.2.</span> <span class="nav-text">码点、代码单元</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuilder%E7%B1%BB"><span class="nav-number">2.3.</span> <span class="nav-text">StringBuilder类</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -280,7 +280,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-19 09:14:20" itemprop="dateModified" datetime="2021-05-19T09:14:20+08:00">2021-05-19</time>
+        <time title="修改时间：2021-05-19 19:29:27" itemprop="dateModified" datetime="2021-05-19T19:29:27+08:00">2021-05-19</time>
       </span>
 
   
@@ -336,8 +336,23 @@
 <h4 id="码点、代码单元"><a href="#码点、代码单元" class="headerlink" title="码点、代码单元"></a>码点、代码单元</h4><p>在字符串中，使用.length返回的是该字符串中所有字符的单元代码的总数，由于一般情况下，我们使用的都是一些常用的字符，只用用一个单元代码就可以表示所以使用length还是可以的。但是对于复杂的字符串，要想得到真正的长度，需要调用关于码点数量的函数得到：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> length = string.codePointCount(<span class="number">0</span>, string.length());</span><br></pre></td></tr></table></figure>
 
+<h4 id="StringBuilder类"><a href="#StringBuilder类" class="headerlink" title="StringBuilder类"></a>StringBuilder类</h4><p>上面说到，String类创建的字符串在进行操作时，总是新建一个对象得到结果，这样就不适用于一些需要频繁拼接的字符串，比如从文件中读取字符串。所以这个时候出现了StringBuilder类，这个类的前身是StringBuffer。在StringBuilder这个类中提供了append函数可以进行一下操作：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder str = <span class="keyword">new</span> StringBuilder();<span class="comment">//在创建这个对象时，默认这个字符串可以添加长度16个代码单元的字符，当然也可以传入整型值，指明最大的长度放多少。或者直接传入一个字符串进行初始化，那么这个对象所能容纳的代码单元为str.length+16</span></span><br><span class="line">str.append(<span class="string">&quot;test&quot;</span>);</span><br><span class="line">str.appeng(<span class="string">&quot;test1&quot;</span>);</span><br><span class="line">str.toString();<span class="comment">//这个字符串就是testtest1</span></span><br></pre></td></tr></table></figure>
 
-
+<p>关于这个StringBuilder的源码实现：</p>
+<p>![StringBuilder的源码定义](截屏2021-05-19 下午7.05.00.png)</p>
+<p>StringBuilder类中append函数的定义如下图所示</p>
+<p>![append函数的实现](截屏2021-05-19 下午7.06.59.png)</p>
+<p>从上图中我们可以看到这个函数继承了父类AbstractStringBuilder里面的append方法，AbstractStringBuilder类中append方法的实现：</p>
+<p>![父类中append方法的实现](截屏2021-05-19 下午7.12.54.png)</p>
+<p>在父类方法的实现中，首先确保增加这个字符串之后，长度不会超过容量，然后调用了String类中的getChars的方法，最后对整个字符串长度进行了修改。</p>
+<p>我们可以接着看一下这个getChars方法是怎么实现的：</p>
+<p>![getChars方法的实现](截屏2021-05-19 下午7.18.49.png)</p>
+<p>上面的getChars方法实现中，调用了System.arraycopy这个函数：</p>
+<p>![arraycopy函数的实现](截屏2021-05-19 下午7.24.28.png)</p>
+<p>而这个函数被nativate声明，说明这个方法不是通过当前文件实现的，而是调用其他语言进行实现，比如C，C++，这就涉及的太低层了，就不继续往下探究了。</p>
+<p>总结一下调用关系：StringBuilder.append-&gt;AbstractStringBuilder.append-&gt;String.getChars-&gt;System.arraycopy</p>
+<p>从这一些系列的挖掘中，我们就可以看到并没有创建任何一个新的char数组对象，而是使用了数组复制的操作进行填充字符串。</p>
 
     </div>
 
