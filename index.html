@@ -266,10 +266,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-05-18 20:30:04 / 修改时间：22:12:32" itemprop="dateCreated datePublished" datetime="2021-05-18T20:30:04+08:00">2021-05-18</time>
+      <time title="创建时间：2021-05-18 20:30:04" itemprop="dateCreated datePublished" datetime="2021-05-18T20:30:04+08:00">2021-05-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-19 09:14:20" itemprop="dateModified" datetime="2021-05-19T09:14:20+08:00">2021-05-19</time>
+      </span>
 
   
   
@@ -297,8 +303,6 @@
     <div class="post-body" itemprop="articleBody">
           <h3 id="char字符"><a href="#char字符" class="headerlink" title="char字符"></a>char字符</h3><p>解释几个char字符知识点：</p>
 <p>码点：不同国家有自己语言，汉语，英语，俄语等，在计算机早期时代，这些语言在计算机中的编码方式是没有统一的，比如，美国的ASCII编码，俄罗斯的KOI，中国的GB等等。这些编码方式的不统一就会造成一些存储方面的问题。于是Unicode1.0就出现了，这是一种专门为了统一不同字符编码的所编制一种编码方式。但是在最初的时候，所有人都认为用8位数字就可以表示这个世界上所有的字符，字符的码点就是该字符的编码。</p>
-<p>单元代码：不过后来由添加了大量汉字导致8位数字不够用了，随后出现了UTF-16编码，即使用16位数组表示字符，这16位的数字组合叫做单元代码。一些常用的字符使用一个单元代码就可以表示，但是一些辅助字符就需要一对单元代码进行表示。不过可以通过单元代码的范围分辨不同的字符。也就是说常用的字符的码点使用一个单元代码就可以表示，辅助字符的码点需要一对单元代码进行表示。char类型就是描述了UTF-16中一个单元代码。</p>
-<h3 id="String字符串"><a href="#String字符串" class="headerlink" title="String字符串"></a>String字符串</h3><p>String数据类型并不是JAVA基本数据类型，而是在char数据类型的基础上实现的。在String类的源码实现中，通过char[]数组的形式定义数据对象，并且每次针对String字符串的操作（比如拼接，替代等）都是新建一个char[]数组对象，对该对象进行操作返回最后的结果。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/05/18/%E3%80%90JAVA%E3%80%91String%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#more" rel="contents">
